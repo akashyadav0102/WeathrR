@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PieGraph">
+        <attr name="aqiValue" format="integer"/>
+        <attr name="pRadius" format="float"/>
+    </declare-styleable>
+</resources>

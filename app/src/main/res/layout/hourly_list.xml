@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/list_time"
+                    android:layout_width="70dp"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:text="17:55PM"
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:id="@+id/list_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="55dp" />
+
+                <TextView
+                    android:id="@+id/list_temperature"
+                    android:layout_width="53dp"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/list_feels_like"
+                    android:layout_width="130dp"
+                    android:layout_height="55dp"
+                    android:text="@string/feels_like_text"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:id="@+id/dew_icon"
+                    android:layout_width="45dp"
+                    android:layout_height="55dp"
+                    android:padding="8dp"
+                    android:src="@drawable/drop" />
+
+                <TextView
+                    android:id="@+id/list_pop"
+                    android:layout_width="45dp"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            style="@style/Divider"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

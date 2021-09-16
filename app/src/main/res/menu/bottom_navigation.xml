@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/today_button"
+        android:title="@string/today_btn_text"
+        android:icon="@drawable/ic_baseline_home_24" />
+
+    <item
+        android:id="@+id/hourly_button"
+        android:title="@string/hourly_btn_text"
+        android:icon="@drawable/hourly_img" />
+
+    <item
+        android:id="@+id/daily_button"
+        android:title="@string/daily_btn_text"
+        android:icon="@drawable/daily_img" />
+
+    <item
+        android:id="@+id/radar_button"
+        android:title="@string/radar_btn_text"
+        android:icon="@drawable/ic_baseline_map_24" />
+
+
+</menu>

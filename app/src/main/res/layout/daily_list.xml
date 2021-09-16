@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/daily_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/month_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:text=""/>
+
+        <RelativeLayout
+            android:id="@+id/main_info_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="80dp"
+            android:paddingEnd="40dp">
+
+            <ImageView
+                android:id="@+id/weather_icon_daily"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/daily_min_max"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/weather_icon_daily"
+                android:gravity="center_vertical"
+                android:text="@string/daily_temp_min_max"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/daily_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weather_icon_daily"
+                android:text=""
+                android:layout_alignEnd="@+id/daily_min_max"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/clouds"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/cloud_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/clouds"
+                    android:gravity="center_vertical"
+                    android:layout_column="1"/>
+
+                <TextView
+                    android:id="@+id/cloud_percent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/drop"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/daily_pop"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/precipitation"
+                    android:gravity="center_vertical"
+                    android:layout_column="1"/>
+
+                <TextView
+                    android:id="@+id/pop_percent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_marginTop="5dp"
+            style="@style/Divider"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/morning"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="35sp"/>
+
+        <TableLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sunrise"/>
+
+                <TextView
+                    android:id="@+id/daily_sunrise"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/morning_temperature"/>
+
+                <TextView
+                    android:id="@+id/morning_temp"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/feels_like"/>
+
+                <TextView
+                    android:id="@+id/morning_feels_like"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            style="@style/Divider"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/afternoon"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="35sp"/>
+
+        <TableLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/uvi"/>
+
+                <TextView
+                    android:id="@+id/daily_aqi"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/afternoon_temperature"/>
+
+                <TextView
+                    android:id="@+id/daily_afternoon"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/feels_like"/>
+
+                <TextView
+                    android:id="@+id/afternoon_feels_like"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            style="@style/Divider"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/evening"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="35sp"/>
+
+        <TableLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sunset"/>
+
+                <TextView
+                    android:id="@+id/daily_sunset"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/evening_temperature"/>
+
+                <TextView
+                    android:id="@+id/daily_evening"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/feels_like"/>
+
+                <TextView
+                    android:id="@+id/evening_feels_like"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            style="@style/Divider"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/night"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="35sp"/>
+
+        <TableLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/moonrise"/>
+
+                <TextView
+                    android:id="@+id/daily_moonrise"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/night_temperature"/>
+
+                <TextView
+                    android:id="@+id/daily_night"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/feels_like"/>
+
+                <TextView
+                    android:id="@+id/night_feels_like"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:textSize="20sp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/moonphase"/>
+
+                <TextView
+                    android:id="@+id/daily_moonphase"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            style="@style/Divider"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
